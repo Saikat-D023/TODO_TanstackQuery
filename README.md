@@ -1,28 +1,49 @@
-## Getting Started
+📝 Todo App — Next.js + TanStack Query
 
-First, run the development server:
+A simple Todo application built with Next.js (App Router) and TanStack React Query demonstrating modern client-side data fetching, caching, mutations, and dependent queries.
 
-```bash
-bun dev
-```
+This project covers:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Fetching and displaying todos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Viewing todo by ID
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Creating new todos
 
-## Learn More
+Caching & background refetching
 
-To learn more about Next.js, take a look at the following resources:
+Query invalidation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dependent queries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🚀 Tech Stack
 
-## Deploy on Vercel
+Next.js (App Router)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+React
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+@tanstack/react-query
+
+Axios
+
+JavaScript
+
+📂 Folder Structure
+src/
+│
+├── app/
+│   ├── page.jsx                # List all todos
+│   ├── add/
+│   │   └── page.jsx            # Add new todo
+│   └── todos/
+│       └── [id]/
+│           └── page.jsx        # View single todo
+│
+├── components/
+│   └── TodoList.jsx
+│
+├── lib/
+│   └── api.js                  # Axios instance
+│
+└── providers/
+    └── QueryProvider.jsx       # TanStack Query provider
